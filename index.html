@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Online Clicker Race</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Clicker Race</h1>
+
+    <div class="top-row">
+      <div class="me">
+        <label>Nickname: <input id="nameInput" maxlength="20"></label>
+        <button id="setNameBtn">Set name</button>
+        <div>Your score: <span id="myScore">0</span></div>
+      </div>
+
+      <div class="controls">
+        <div>Time left: <span id="timer">--</span> s</div>
+        <label>Duration:
+          <select id="durationSelect">
+            <option value="10">10s</option>
+            <option value="20">20s</option>
+            <option value="30" selected>30s</option>
+            <option value="60">60s</option>
+          </select>
+        </label>
+        <button id="startBtn">Start new round</button>
+      </div>
+    </div>
+
+    <div class="big-click">
+      <button id="clickBtn">Click!</button>
+      <div id="floating"></div>
+    </div>
+
+    <h3>Players</h3>
+    <ul id="playersList"></ul>
+
+    <div id="result" class="result"></div>
+
+    <footer>
+      <small>Made quick & messy — not super pro :)</small>
+    </footer>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>
